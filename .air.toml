@@ -1,0 +1,15 @@
+# Configuración básica de air
+[build]
+  cmd = "go build -o ./tmp/main ."
+  bin = "./tmp/main"
+  full_bin = "APP_ENV=dev ./tmp/main"
+  log = "air_errors.log"
+
+[log]
+  time = "2006-01-02 15:04:05"
+
+[cron]
+  enable = true
+  schedule = "@every 5s"
+  cmd = "go test ./..."
+  output = "cron.log"

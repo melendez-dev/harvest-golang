@@ -1,13 +1,11 @@
 package controllers
 
 import (
-	"database/sql"
 	"encoding/json"
 	"net/http"
 )
 
 type BaseController struct {
-	DB *sql.DB
 }
 
 func (bc *BaseController) SendJson(w http.ResponseWriter, data interface{}) {

@@ -8,8 +8,7 @@ import (
 )
 
 type PermissionHandler struct {
-	services          application.PermissionService
-	PermissionService application.PermissionService
+	services application.PermissionService
 	controllers.BaseController
 }
 

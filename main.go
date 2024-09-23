@@ -14,8 +14,8 @@ func main() {
 	mux := http.NewServeMux()
 
 	dbConn := bootstrap.InitDB("./app/config/config.yml")
-	permissionsService := bootstrap.InitPermissions(dbConn)
 
+	permissionsService := bootstrap.InitPermissions(dbConn)
 	mux.Handle("/api/v1/rbac/permissions", api.Routes(permissionsService))
 
 	conf, _ := config.NewConfig("./app/config/config.yml")
